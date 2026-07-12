@@ -32,6 +32,10 @@
 
 Agent Behavior Observatory：以可追溯 trace、反事实 replay 与审计 packet 支持 Agent 决策过程的观测与复盘。
 
+### [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab)
+
+面向 OpenAI-compatible endpoint 的并发压测与结果治理工具，统一采集 QPS、aggregate TPS、TTFT、P50/P95，并以 evidence class 标注结果来源。
+
 ---
 
 ## 联系方式
