@@ -1,16 +1,29 @@
-## Hi there 👋
-
 <!--
-**EMT5320/EMT5320** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+  招聘方入口：首屏仅保留职位、业务领域、方法重心和技术栈。
+  项目链接仅指向当前可公开核验的产物。
 -->
+
+# 余凯琪 · Yu Kaiqi
+
+## Evaluation-Driven LLM Agent Systems Engineer
+
+**Production Agent Systems in Cybersecurity**
+
+**Agent Evaluation, Post-Training, and Execution-Grounded Measurement**
+
+`Python` · `FastAPI` · `Kafka` · `vLLM` · `Tool Use` · `Trace & Replay`
+
+---
+
+## Selected Public Work
+
+### [ContextGuard Agent Lab](https://github.com/EMT5320/ContextGuard-Agent-Lab)
+
+Evidence-gated Agent strategy evaluation with structured tool traces, independent grading, bounded security cases, and success–cost–context trade-off analysis.
+
+---
+
+## Contact
+
+- Email: [1908937833@qq.com](mailto:1908937833@qq.com)
+- GitHub: [@EMT5320](https://github.com/EMT5320)
