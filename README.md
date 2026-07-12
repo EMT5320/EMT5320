@@ -32,6 +32,10 @@
 
 Agent Behavior Observatory：以可追溯 trace、反事实 replay 与审计 packet 支持 Agent 决策过程的观测与复盘。
 
+### [Tsukumo](https://github.com/EMT5320/tsukumo) · 持续开发
+
+Rust Agent 指挥所，围绕统一事件、跨 runtime 状态与可追溯执行推进；承接 Loomstead 的过程可观测性，延伸到 Agent 调度与交互层。
+
 ### [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab)
 
 面向 OpenAI-compatible endpoint 的并发压测与结果治理工具，统一采集 QPS、aggregate TPS、TTFT、P50/P95，并以 evidence class 标注结果来源。
