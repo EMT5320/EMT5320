@@ -14,7 +14,7 @@
 **Agent 评测、后训练与执行闭环测量**  
 *Agent Evaluation, Post-Training, and Execution-Grounded Measurement*
 
-`Python` · `FastAPI` · `Kafka` · `vLLM` · `Tool Use` · `Trace & Replay`
+`Python` · `Rust` · `FastAPI` · `Kafka` · `SQLite` · `vLLM` · `Tool Use` · `Trace & Replay`
 
 ---
 
@@ -32,9 +32,9 @@
 
 Agent Behavior Observatory：以可追溯 trace、反事实 replay 与审计 packet 支持 Agent 决策过程的观测与复盘。
 
-### [Tsukumo](https://github.com/EMT5320/tsukumo) · 持续开发
+### [Tsukumo](https://github.com/EMT5320/tsukumo) · [v0.1.0](https://github.com/EMT5320/tsukumo/releases/tag/v0.1.0)
 
-Rust Agent 指挥所，围绕统一事件、跨 runtime 状态与可追溯执行推进；承接 Loomstead 的过程可观测性，延伸到 Agent 调度与交互层。
+Rust 五 crate 构建的本地 Agent 状态与可信交接层：将 Claude/Codex 事件归一为 `KernelEvent`，以 Chronicle、Canonical State 和 Handoff/Projection 分账持有来源、作用域与撤销语义；提供 receipt-first 执行、只读 re-entry、九十九工房 TUI 与 Linux/Windows CI。
 
 ### [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab)
 
