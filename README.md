@@ -1,48 +1,52 @@
-<!--
-  招聘方入口：面向国内招聘，首屏仅保留职位、业务领域、方法重心和技术栈。
-  英文作为检索与跨语言沟通辅助；项目链接仅指向当前可公开核验的产物。
--->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/EMT5320/EMT5320/main/assets/profile-header.svg" alt="余凯琪，评测驱动的 LLM Agent 系统工程师" width="100%">
+</p>
 
-# 余凯琪 · Yu Kaiqi
+<p align="center">
+  <strong>生产 Agent 系统</strong> · <strong>Agent 评测与后训练</strong> · <strong>Trace / Replay</strong> · <strong>Rust Agent Runtime</strong>
+</p>
 
-## 评测驱动的 LLM Agent 系统工程师
-*Evaluation-Driven LLM Agent Systems Engineer*
+<p align="center">
+  <a href="mailto:1908937833@qq.com">Email</a> ·
+  <a href="https://github.com/EMT5320?tab=repositories">Repositories</a>
+</p>
 
-**网络安全生产 Agent 系统**  
-*Production Agent Systems in Cybersecurity*
+## 现在聚焦什么
 
-**Agent 评测、后训练与执行闭环测量**  
-*Agent Evaluation, Post-Training, and Execution-Grounded Measurement*
+把生产复杂度抽象成可控实验，用 execution receipt、独立 grader、
+counterfactual replay 与 claim boundary 测量 Agent 行为，再让证据反向推动
+系统架构和后训练决策。
 
-`Python` · `Rust` · `FastAPI` · `Kafka` · `SQLite` · `vLLM` · `Tool Use` · `Trace & Replay`
+| Agent 系统工程 | 评测 / 后训练 |
+|---|---|
+| Tool boundary、状态持有、权限与交接 | Protocol split、独立评分、success–cost trade-off |
+| Trace、receipt、replay、failure analysis | Verifier-backed data、SFT/DPO、construct validity |
+| Python / FastAPI / Kafka / SQLite / Rust | vLLM / OpenAI-compatible endpoints / benchmark governance |
 
----
+## Selected systems
 
-## 公开项目
+| System | Engineering question | Evidence receipt | Start here |
+|---|---|---|---|
+| **AlgoCoach-Flywheel** | 如何把真实练习、可执行验证、数据治理、评测和后训练连成闭环？ | 15 problems / 440 cases；14/20 executed repair；DPO CI 跨 0 | [pipeline + CPU smoke](https://github.com/EMT5320/algocoach-flywheel) |
+| **ContextGuard Agent Lab** | 同任务与工具下，不同 Agent 控制策略会在哪里分化？ | 17 cases / 68 runs；独立 grader；四类 strategy split | [case cards + JSONL](https://github.com/EMT5320/ContextGuard-Agent-Lab) |
+| **Loomstead** | 如何把复杂 Agent 行为变成可追溯、可 replay 的工程证据？ | trace coverage 1.0；100 LLM evidence records；audit 10/10 | [behavior observatory](https://github.com/EMT5320/loomstead) |
+| **Tsukumo** | Agent 状态如何跨 runtime 可信交接，同时保留来源、作用域和撤销语义？ | 5-crate Rust workspace；receipt-first；v0.1.0；Linux/Windows CI | [actual TUI + demo](https://github.com/EMT5320/tsukumo) |
 
-### [AlgoCoach-Flywheel](https://github.com/EMT5320/algocoach-flywheel)
+**Serving / LLMOps 邻接证据：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab)
+以 endpoint registry、QPS/TPS/P50/P95/TTFT 和 `historical/live/pending`
+分账补充模型服务与压测能力；仅在对应 JD 下替换进入主项目组合。
 
-面向算法辅导的 verifier-backed 评测与后训练系统，公开 runner / verifier、精选评测证据与可复现 smoke 检查。
+## Working contract
 
-### [ContextGuard Agent Lab](https://github.com/EMT5320/ContextGuard-Agent-Lab)
+```text
+production complexity
+  -> controlled experiment
+  -> execution-grounded evidence
+  -> architecture / policy evolution
+```
 
-以证据门控方式评测 Agent 策略，包含结构化工具轨迹、独立评分、受控安全案例，以及 success—cost—context 权衡分析。
+- 公开项目只写可运行、可回溯的事实；数字必须能回到 report、trace 或 artifact。
+- 明确区分 production pattern、bounded benchmark、historical import 与 owner rerun。
+- 工程目标是让 Agent 的行为、状态和决策边界可解释、可复验、可撤销。
 
-### [Loomstead](https://github.com/EMT5320/loomstead)
-
-Agent Behavior Observatory：以可追溯 trace、反事实 replay 与审计 packet 支持 Agent 决策过程的观测与复盘。
-
-### [Tsukumo](https://github.com/EMT5320/tsukumo) · [v0.1.0](https://github.com/EMT5320/tsukumo/releases/tag/v0.1.0)
-
-Rust 五 crate 构建的本地 Agent 状态与可信交接层：将 Claude/Codex 事件归一为 `KernelEvent`，以 Chronicle、Canonical State 和 Handoff/Projection 分账持有来源、作用域与撤销语义；提供 receipt-first 执行、只读 re-entry、九十九工房 TUI 与 Linux/Windows CI。
-
-### [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab)
-
-面向 OpenAI-compatible endpoint 的并发压测与结果治理工具，统一采集 QPS、aggregate TPS、TTFT、P50/P95，并以 evidence class 标注结果来源。
-
----
-
-## 联系方式
-
-- 邮箱：[1908937833@qq.com](mailto:1908937833@qq.com)
-- GitHub：[@EMT5320](https://github.com/EMT5320)
+<sub>Open to evaluation-driven LLM Agent systems, AI developer tools, and model evaluation / post-training roles.</sub>
