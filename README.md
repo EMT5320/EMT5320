@@ -3,8 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="mailto:1908937833@qq.com">Email</a> ·
-  <a href="https://github.com/EMT5320?tab=repositories">全部仓库</a>
+  <a href="mailto:1908937833@qq.com">Email</a>
 </p>
 
 ## 我做什么
@@ -17,12 +16,12 @@
 
 | 项目 | 工程问题 | 关键证据 |
 |---|---|---|
-| **[AlgoCoach-Flywheel](https://github.com/EMT5320/algocoach-flywheel)** | 代码辅导的「教得好」能否像判题一样被执行验证？ | 42 道 runner-ready 公开题 · 冻结 15 题 / 440 例评测基准 · provenance split 与泄漏审计 · 7B SFT/DPO 全链路 |
-| **[ContextGuard Agent Lab](https://github.com/EMT5320/ContextGuard-Agent-Lab)** | 任务、工具、预算固定时，四种 Agent 策略在哪一步分叉？ | 17 cases × 4 strategies = 68 次受控运行 · 独立 grader · FastMCP 工具边界 |
+| **[AlgoCoach-Flywheel](https://github.com/EMT5320/algocoach-flywheel)** | 代码辅导的「教得好」能否像判题一样被执行验证？ | 42 道 runner-ready 公开题 · 冻结 15 题 / 440 例评测基准 · provenance split 与泄漏审计 · 7B QLoRA SFT/DPO pilot + served eval |
+| **[ContextGuard Agent Lab](https://github.com/EMT5320/ContextGuard-Agent-Lab)** | 任务、工具、预算固定时，四种 Agent 策略在哪一步分叉？ | 16 scored cases × 4 strategies = 64 次受控运行 · 独立 grader · FastMCP 工具边界 |
 | **[Loomstead](https://github.com/EMT5320/loomstead)** | Agent 的每个动作能否回溯到动机、记忆与工具证据？ | Godot + Python runtime · `phase2.trace` · counterfactual replay · audit packet |
 | **[Tsukumo](https://github.com/EMT5320/tsukumo)** | Agent 状态如何跨 runtime 交接，并保留来源、作用域与撤销语义？ | Rust 5-crate workspace · receipt-first · 只读 re-entry · v0.1.0 · Linux/Windows CI |
 
-**Serving / LLMOps：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab) — OpenAI-compatible endpoint benchmark，QPS / TPS / TTFT / P50 / P95，结果按 `historical / live / pending` evidence class 分账保存。
+**Serving / LLMOps：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab) — OpenAI-compatible endpoint benchmark，QPS / usage-backed TPS / TTFT / P50 / P90 / P95，结果按 `historical / live / pending` evidence class 分账保存。
 
 ## 技术栈
 
