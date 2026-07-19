@@ -8,7 +8,7 @@
 
 ## 我做什么
 
-在大型运营商安全事业部做大模型算法与 AI 工程，主导和参与 15+ 个 AI 服务落地生产。多 Agent 研判系统跑到 20+ 专业 Agent、单链路 240+ 次工具调用之后，上下文膨胀、工具预算、证据一致性这些问题都真实出现过。我的做法是把它们拆成可运行、可评测的对照实验，验证过的方法再回到生产架构里。
+在某运营商安全研发团队做大模型算法与 AI 工程，主导和参与 15+ 个 AI 服务落地生产。多 Agent 研判系统跑到 20+ 专业 Agent、单链路 240+ 次工具调用之后，上下文膨胀、工具预算、证据一致性这些问题都真实出现过。我的做法是把它们拆成可运行、可评测的对照实验，验证过的方法再回到生产架构里。
 
 下面的个人项目各自回答其中一个工程问题。
 
@@ -21,7 +21,7 @@
 | **[Loomstead](https://github.com/EMT5320/loomstead)** | Agent 的每个动作能否回溯到动机、记忆与工具证据？ | Godot + Python runtime · `phase2.trace` · counterfactual replay · audit packet |
 | **[Tsukumo](https://github.com/EMT5320/tsukumo)** | Agent 状态如何跨 runtime 交接，并保留来源、作用域与撤销语义？ | Rust 5-crate workspace · receipt-first · 只读 re-entry · v0.1.0 · Linux/Windows CI |
 
-**Serving / LLMOps：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab) — OpenAI-compatible endpoint benchmark，QPS / usage-backed TPS / TTFT / P50 / P90 / P95，结果按 `historical / live / pending` evidence class 分账保存。
+**Serving / LLMOps：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab) — OpenAI-compatible endpoint benchmark，QPS / TPS / TTFT 与延迟分位数，结果按 `historical / live / pending` evidence class 分账保存。
 
 ## 技术栈
 
