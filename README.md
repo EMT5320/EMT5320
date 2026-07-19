@@ -2,51 +2,51 @@
   <img src="https://raw.githubusercontent.com/EMT5320/EMT5320/main/assets/profile-header.svg" alt="余凯琪，评测驱动的 LLM Agent 系统工程师" width="100%">
 </p>
 
-<p align="center">
-  <strong>生产 Agent 系统</strong> · <strong>Agent 评测与后训练</strong> · <strong>Trace / Replay</strong> · <strong>Rust Agent Runtime</strong>
-</p>
+> **把生产 Agent 的复杂问题拆成可运行、可评测的系统。**<br>
+> *Building LLM agent systems with execution-grounded evaluation.*
 
 <p align="center">
   <a href="mailto:1908937833@qq.com">Email</a> ·
-  <a href="https://github.com/EMT5320?tab=repositories">Repositories</a>
+  <a href="https://github.com/EMT5320?tab=repositories">全部仓库</a>
 </p>
 
-## 现在聚焦什么
+## 关于我
 
-把生产复杂度抽象成可控实验，用 execution receipt、独立 grader、
-counterfactual replay 与 claim boundary 测量 Agent 行为，再让证据反向推动
-系统架构和后训练决策。
+人工智能硕士，现从事大模型算法与 AI 工程。工作里把多 Agent、异步服务和本地推理落进真实业务。个人项目把生产中反复出现的问题拆成可运行、可对照的实验。
 
-| Agent 系统工程 | 评测 / 后训练 |
-|---|---|
-| Tool boundary、状态持有、权限与交接 | Protocol split、独立评分、success–cost trade-off |
-| Trace、receipt、replay、failure analysis | Verifier-backed data、SFT/DPO、construct validity |
-| Python / FastAPI / Kafka / SQLite / Rust | vLLM / OpenAI-compatible endpoints / benchmark governance |
+我主要做 Agent 的任务规划与工具调用，也处理长链路中的上下文和状态。Trace、grader 与 verifier 用来定位失败发生在哪一层。
 
-## Selected systems
+## 代表项目
 
-| System | Engineering question | Evidence receipt | Start here |
-|---|---|---|---|
-| **AlgoCoach-Flywheel** | 如何把真实练习、可执行验证、数据治理、评测和后训练连成闭环？ | 15 problems / 440 cases；14/20 executed repair；DPO CI 跨 0 | [pipeline + CPU smoke](https://github.com/EMT5320/algocoach-flywheel) |
-| **ContextGuard Agent Lab** | 同任务与工具下，不同 Agent 控制策略会在哪里分化？ | 17 cases / 68 runs；独立 grader；四类 strategy split | [case cards + JSONL](https://github.com/EMT5320/ContextGuard-Agent-Lab) |
-| **Loomstead** | 如何把复杂 Agent 行为变成可追溯、可 replay 的工程证据？ | trace coverage 1.0；100 LLM evidence records；audit 10/10 | [behavior observatory](https://github.com/EMT5320/loomstead) |
-| **Tsukumo** | Agent 状态如何跨 runtime 可信交接，同时保留来源、作用域和撤销语义？ | 5-crate Rust workspace；receipt-first；v0.1.0；Linux/Windows CI | [actual TUI + demo](https://github.com/EMT5320/tsukumo) |
+### [AlgoCoach-Flywheel](https://github.com/EMT5320/algocoach-flywheel)
 
-**Serving / LLMOps 邻接证据：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab)
-以 endpoint registry、QPS/TPS/P50/P95/TTFT 和 `historical/live/pending`
-分账补充模型服务与压测能力；仅在对应 JD 下替换进入主项目组合。
+把代码辅导的“教得好”转成可执行评测，并连接数据治理与 7B SFT / DPO。<br>
+`42 runner-ready problems` · `15 problems / 440 cases` · `protocol split` · 人工校准
 
-## Working contract
+### [ContextGuard Agent Lab](https://github.com/EMT5320/ContextGuard-Agent-Lab)
 
-```text
-production complexity
-  -> controlled experiment
-  -> execution-grounded evidence
-  -> architecture / policy evolution
-```
+固定任务、工具和预算，比较四种 Agent 策略在哪一步分叉。<br>
+`17 cases × 4 strategies` · 独立 grader · FastMCP tool boundary
 
-- 公开项目只写可运行、可回溯的事实；数字必须能回到 report、trace 或 artifact。
-- 明确区分 production pattern、bounded benchmark、historical import 与 owner rerun。
-- 工程目标是让 Agent 的行为、状态和决策边界可解释、可复验、可撤销。
+### [Loomstead](https://github.com/EMT5320/loomstead)
 
-<sub>Open to evaluation-driven LLM Agent systems, AI developer tools, and model evaluation / post-training roles.</sub>
+从 Agent 动作回溯到动机、记忆与工具证据，并做 counterfactual replay。<br>
+Godot + Python runtime · `phase2.trace` · eval / replay / audit artifacts
+
+### [Tsukumo](https://github.com/EMT5320/tsukumo)
+
+让 Claude / Codex 间的本地状态交接保留来源、作用域与撤销语义。<br>
+Rust 5-crate workspace · receipt-first · v0.1.0 · Linux / Windows CI
+
+**模型服务与压测：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab) 是 OpenAI-compatible endpoint benchmark，记录 QPS / TPS / TTFT / P50 / P95，并按 evidence class 分开保存结果。
+
+## 技术栈
+
+- **Agent 系统：** 任务规划与多工具调用、多 Agent 编排、上下文工程、RAG / MCP、状态交接与 Trace / Replay
+- **评测与后训练：** PyTorch / Transformers / PEFT、QLoRA SFT / DPO、benchmark 与 grader、数据治理、泄漏审计与人工校准
+- **工程与服务：** Python / Rust、FastAPI、Kafka、SQLite / SQLAlchemy、vLLM、OpenAI-compatible API、SSE / WebSocket
+
+## 求职方向与联系
+
+**LLM Agent 系统工程 / 大模型评测与后训练 / AI 应用工程**<br>
+[1908937833@qq.com](mailto:1908937833@qq.com)
