@@ -1,12 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
   <title id="title">余凯琪 — 评测驱动的 LLM Agent 系统工程师</title>
-  <desc id="desc">Production agent systems, execution-grounded evaluation, and reliable agent runtimes.</desc>
-  <rect width="1200" height="290" fill="#f4f1e8"/>
-  <rect x="0" y="0" width="16" height="290" fill="#a34d35"/>
-  <path d="M52 70H1148M52 258H1148" stroke="#cfc7b8"/>
+  <desc id="desc">Production agent systems, execution-grounded evaluation, post-training, and trustworthy agent runtimes.</desc>
+  <rect width="1200" height="330" fill="#f4f1e8"/>
+  <rect x="0" y="0" width="16" height="330" fill="#a34d35"/>
+  <path d="M52 70H1148M52 262H1148" stroke="#cfc7b8"/>
   <text x="54" y="46" fill="#a34d35" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="2">EVALUATION-DRIVEN LLM AGENT SYSTEMS</text>
   <text x="54" y="128" fill="#1c2328" font-family="Songti SC, STSong, ui-serif, serif" font-size="48" font-weight="700">余凯琪</text>
   <text x="250" y="128" fill="#665f56" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25">YU KAIQI</text>
   <text x="54" y="182" fill="#1c2328" font-family="ui-sans-serif, system-ui, sans-serif" font-size="27" font-weight="700">评测驱动的 LLM Agent 系统工程师</text>
-  <text x="54" y="224" fill="#665f56" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18">生产 Agent 系统 · Agent 评测与后训练 · Python / Rust</text>
+  <text x="54" y="222" fill="#665f56" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18">生产 Agent 系统 · 评测与后训练 · Agent 运行时与可观测 · Python / Rust</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
+    <text x="54" y="304" fill="#1c2328">BUILD</text><text x="111" y="304" fill="#665f56">多 Agent 编排 · 工具边界 · 异步服务</text>
+    <text x="430" y="304" fill="#1c2328">MEASURE</text><text x="508" y="304" fill="#665f56">grader · verifier · protocol split</text>
+    <text x="820" y="304" fill="#1c2328">EVOLVE</text><text x="889" y="304" fill="#665f56">SFT/DPO · 架构演进 · 可信交接</text>
+  </g>
 </svg>

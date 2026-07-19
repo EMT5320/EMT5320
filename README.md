@@ -2,51 +2,34 @@
   <img src="https://raw.githubusercontent.com/EMT5320/EMT5320/main/assets/profile-header.svg" alt="余凯琪，评测驱动的 LLM Agent 系统工程师" width="100%">
 </p>
 
-> **把生产 Agent 的复杂问题拆成可运行、可评测的系统。**<br>
-> *Building LLM agent systems with execution-grounded evaluation.*
-
 <p align="center">
   <a href="mailto:1908937833@qq.com">Email</a> ·
   <a href="https://github.com/EMT5320?tab=repositories">全部仓库</a>
 </p>
 
-## 关于我
+## 我做什么
 
-人工智能硕士，现从事大模型算法与 AI 工程。工作里把多 Agent、异步服务和本地推理落进真实业务。个人项目把生产中反复出现的问题拆成可运行、可对照的实验。
+在某国央企安全事业部做大模型算法与 AI 工程，主导和参与 15+ 个 AI 服务落地生产。多 Agent 研判系统跑到 20+ 专业 Agent、单链路 240+ 次工具调用之后，上下文膨胀、工具预算、证据一致性这些问题都真实出现过。我的做法是把它们拆成可运行、可评测的对照实验，验证过的方法再回到生产架构里。
 
-我主要做 Agent 的任务规划与工具调用，也处理长链路中的上下文和状态。Trace、grader 与 verifier 用来定位失败发生在哪一层。
+下面的个人项目各自回答其中一个工程问题。
 
-## 代表项目
+## Selected Systems
 
-### [AlgoCoach-Flywheel](https://github.com/EMT5320/algocoach-flywheel)
+| 项目 | 工程问题 | 关键证据 |
+|---|---|---|
+| **[AlgoCoach-Flywheel](https://github.com/EMT5320/algocoach-flywheel)** | 代码辅导的「教得好」能否像判题一样被执行验证？ | 42 道 runner-ready 公开题 · 冻结 15 题 / 440 例评测基准 · provenance split 与泄漏审计 · 7B SFT/DPO 全链路 |
+| **[ContextGuard Agent Lab](https://github.com/EMT5320/ContextGuard-Agent-Lab)** | 任务、工具、预算固定时，四种 Agent 策略在哪一步分叉？ | 17 cases × 4 strategies = 68 次受控运行 · 独立 grader · FastMCP 工具边界 |
+| **[Loomstead](https://github.com/EMT5320/loomstead)** | Agent 的每个动作能否回溯到动机、记忆与工具证据？ | Godot + Python runtime · `phase2.trace` · counterfactual replay · audit packet |
+| **[Tsukumo](https://github.com/EMT5320/tsukumo)** | Agent 状态如何跨 runtime 交接，并保留来源、作用域与撤销语义？ | Rust 5-crate workspace · receipt-first · 只读 re-entry · v0.1.0 · Linux/Windows CI |
 
-把代码辅导的“教得好”转成可执行评测，并连接数据治理与 7B SFT / DPO。<br>
-`42 runner-ready problems` · `15 problems / 440 cases` · `protocol split` · 人工校准
-
-### [ContextGuard Agent Lab](https://github.com/EMT5320/ContextGuard-Agent-Lab)
-
-固定任务、工具和预算，比较四种 Agent 策略在哪一步分叉。<br>
-`17 cases × 4 strategies` · 独立 grader · FastMCP tool boundary
-
-### [Loomstead](https://github.com/EMT5320/loomstead)
-
-从 Agent 动作回溯到动机、记忆与工具证据，并做 counterfactual replay。<br>
-Godot + Python runtime · `phase2.trace` · eval / replay / audit artifacts
-
-### [Tsukumo](https://github.com/EMT5320/tsukumo)
-
-让 Claude / Codex 间的本地状态交接保留来源、作用域与撤销语义。<br>
-Rust 5-crate workspace · receipt-first · v0.1.0 · Linux / Windows CI
-
-**模型服务与压测：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab) 是 OpenAI-compatible endpoint benchmark，记录 QPS / TPS / TTFT / P50 / P95，并按 evidence class 分开保存结果。
+**Serving / LLMOps：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab) — OpenAI-compatible endpoint benchmark，QPS / TPS / TTFT / P50 / P95，结果按 `historical / live / pending` evidence class 分账保存。
 
 ## 技术栈
 
-- **Agent 系统：** 任务规划与多工具调用、多 Agent 编排、上下文工程、RAG / MCP、状态交接与 Trace / Replay
-- **评测与后训练：** PyTorch / Transformers / PEFT、QLoRA SFT / DPO、benchmark 与 grader、数据治理、泄漏审计与人工校准
-- **工程与服务：** Python / Rust、FastAPI、Kafka、SQLite / SQLAlchemy、vLLM、OpenAI-compatible API、SSE / WebSocket
+- **Agent 系统：** 任务规划与多工具调用、多 Agent 编排、LangChain / LangGraph、上下文工程、RAG / MCP、状态交接与 Trace / Replay
+- **评测与后训练：** PyTorch / Transformers / PEFT、QLoRA SFT / DPO、DeepSpeed 分布式训练、benchmark 与 grader、数据治理、泄漏审计与人工校准
+- **推理与工程：** Python / Rust、vLLM / SGLang、FastAPI、Kafka、SQLite / SQLAlchemy、OpenAI-compatible API、SSE / WebSocket
 
-## 求职方向与联系
+## 求职方向
 
-**LLM Agent 系统工程 / 大模型评测与后训练 / AI 应用工程**<br>
-[1908937833@qq.com](mailto:1908937833@qq.com)
+**LLM Agent 系统工程 / 大模型评测与后训练 / AI 应用工程** · [1908937833@qq.com](mailto:1908937833@qq.com)
