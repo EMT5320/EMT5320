@@ -25,9 +25,9 @@
 
 ## 技术栈
 
-- **Agent 系统：** 任务规划与多工具调用、多 Agent 编排、LangChain / LangGraph、上下文工程、RAG / MCP、状态交接与 Trace / Replay
-- **评测与后训练：** PyTorch / Transformers / PEFT、QLoRA SFT / DPO、DeepSpeed 分布式训练、benchmark 与 grader、数据治理、泄漏审计与人工校准
-- **推理与工程：** Python / Rust、vLLM / SGLang、FastAPI、Kafka、SQLite / SQLAlchemy、OpenAI-compatible API、SSE / WebSocket
+- **Agent 系统：** 任务规划与 Tool Use / Function Calling、多 Agent 编排、LangChain / LangGraph、上下文工程、RAG / MCP、状态交接与 Trace / Replay
+- **评测与后训练：** PyTorch / Hugging Face Transformers / PEFT、QLoRA SFT / DPO、benchmark、自动化 grader 与 LLM-as-a-Judge、训练 / 评测数据构建与治理、泄漏审计与人工校准
+- **推理与工程：** Python、FastAPI / Pydantic、vLLM 多卡部署、OpenAI-compatible API、KV Cache / 长上下文与并发调优、Kafka、SSE / WebSocket
 
 ## 求职方向
 
