@@ -6,22 +6,20 @@
   <a href="mailto:1908937833@qq.com">Email</a>
 </p>
 
-## 我做什么
+## 生产经验
 
-在某运营商安全研发团队做大模型算法与 AI 工程，主导和参与 15+ 个 AI 服务落地生产。多 Agent 研判系统跑到 20+ 专业 Agent、单链路 240+ 次工具调用之后，上下文膨胀、工具预算、证据一致性这些问题都真实出现过。我的做法是把它们拆成可运行、可评测的对照实验，验证过的方法再回到生产架构里。
+目前在某运营商安全研发团队做大模型算法与 AI 工程，主导和参与 15+ 个 AI 服务上线。SOC 多 Agent 研判系统扩展到 20+ 专业 Agent，代表性链路包含 240+ 次工具调用。系统规模上来后，上下文膨胀、工具预算和证据一致性成了最常处理的问题。我把这类问题拆成可运行的实验，确认边界后再把结果带回生产系统。
 
-下面的个人项目各自回答其中一个工程问题。
+## 个人项目
 
-## Selected Systems
-
-| 项目 | 工程问题 | 关键证据 |
+| 项目 | 解决的问题 | 实现与结果 |
 |---|---|---|
-| **[AlgoCoach-Flywheel](https://github.com/EMT5320/algocoach-flywheel)** | 代码辅导的「教得好」能否像判题一样被执行验证？ | 42 道 runner-ready 公开题 · 冻结 15 题 / 440 例评测基准 · provenance split 与泄漏审计 · 7B QLoRA SFT/DPO served eval 未支持 DPO fixed-rate uplift，转入 regression mining |
+| **[AlgoCoach-Flywheel](https://github.com/EMT5320/algocoach-flywheel)** | 代码辅导的「教得好」能否像判题一样被执行验证？ | 42 道 runner-ready 公开题 · 冻结 15 题 / 440 例评测基准 · provenance split 与泄漏审计 · 7B QLoRA SFT/DPO served eval 驱动 SFT 基线选择，并将增益与回归切片转入 regression mining |
 | **[ContextGuard Agent Lab](https://github.com/EMT5320/ContextGuard-Agent-Lab)** | 任务、工具、预算固定时，四种 Agent 策略在哪一步分叉？ | 16 scored cases × 4 strategies = 64 次受控运行 · 独立 grader · FastMCP 工具边界 |
 | **[Loomstead](https://github.com/EMT5320/loomstead)** | Agent 的每个动作能否回溯到动机、记忆与工具证据？ | Godot + Python runtime · `phase2.trace` · counterfactual replay · audit packet |
 | **[Tsukumo](https://github.com/EMT5320/tsukumo)** | Agent 状态如何跨 runtime 交接，并保留来源、作用域与撤销语义？ | Rust 5-crate workspace · receipt-first · 只读 re-entry · v0.1.0 · Linux/Windows CI |
 
-**Serving / LLMOps：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab) — OpenAI-compatible endpoint benchmark，QPS / TPS / TTFT 与延迟分位数，结果按 `historical / live / pending` evidence class 分账保存。
+**推理服务：** [LLM Inference Lab](https://github.com/EMT5320/llm-inference-lab)，面向 OpenAI-compatible endpoint 对比 QPS / TPS / TTFT 和延迟分位数，并区分历史压测导入与现场复跑。
 
 ## 技术栈
 
